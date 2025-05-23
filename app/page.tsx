@@ -6,7 +6,7 @@ import { getAllProducts } from "@/lib/api";
 
 
 export default async function Home() {
-  const products = await getAllProducts();
+  const products = await getAllProducts(3);
 
   return (
     <div>

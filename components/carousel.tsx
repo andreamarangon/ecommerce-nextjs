@@ -2,9 +2,10 @@
 import { Card, CardContent, CardTitle } from "./ui/card"
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Product } from "@/types";
 
 interface Props {
-  products: any;
+  products: Product[];
 }
 
 export const Carousel = ({ products }: Props) => {
@@ -19,8 +20,6 @@ export const Carousel = ({ products }: Props) => {
   }, [products.length]);
 
   const currentProduct = products[current];
-  console.log(currentProduct);
-
 
   return (
     <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300">
@@ -29,9 +28,8 @@ export const Carousel = ({ products }: Props) => {
           <Image
             src={currentProduct.images[0]}
             alt={currentProduct.title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-opacity duration-500 ease-in-out"
+            fill
+            className="transition-opacity duration-500 ease-in-out object-cover"
           />
         </div>
       )}

@@ -1,6 +1,14 @@
+import { ProductList } from "@/components/product-list";
+import { getAllProducts } from "@/lib/api";
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getAllProducts();
   return (
-    <div>Products</div>
+    <div className="pb-8">
+      <h1 className="text-3xl font-bold leading-none tracking-tight text-foreground text-center mb-8">
+        Tutti gli Articoli
+      </h1>
+      <ProductList products={products} />
+    </div>
   )
 }
