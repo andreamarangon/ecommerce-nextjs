@@ -12,9 +12,10 @@ export const ProductCard = ({ product }: { product: Product }) => {
         {product.thumbnail && (
           <div className="relative h-60 w-full">
             <Image
-              src={product.thumbnail}
+              src={product.images[0] || product.thumbnail}
               alt={product.title}
               fill
+              sizes="auto"
               className="group-hover:opacity-90 transition-opacity duration-300 rounded-t-lg object-cover"
             />
           </div>
