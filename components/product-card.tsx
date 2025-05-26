@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 export const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <Link href={`/product/${product.id}`} className="block h-full">
+    <Link href={`/products/${product.id}`} className="block h-full">
       <Card className="group hover:shadow-2xl transition duration-300 py-0 h-full flex flex-col border-gray-300 gap-0">
         {product.thumbnail && (
           <div className="relative h-60 w-full">
@@ -15,6 +15,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
               src={product.images[0] || product.thumbnail}
               alt={product.title}
               fill
+              priority
               sizes="auto"
               className="group-hover:opacity-90 transition-opacity duration-300 rounded-t-lg object-cover"
             />
