@@ -6,5 +6,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const product: Product = await getProductById(id);
 
+  //const plainProduct = JSON.parse(JSON.stringify(product));
   return <ProductDetail product={product} />;
 }

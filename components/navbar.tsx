@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ShoppingCartIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 export const Navbar = () => {
   return (
@@ -18,7 +19,13 @@ export const Navbar = () => {
             <Link href="/checkout">Checkout</Link >
           </li>
         </ul>
-        <div className="flex items-center space-x-4"></div>
+
+        <div className="flex items-center space-x-4">
+          <Link href="/checkout">
+            <ShoppingCartIcon className="h-6 w-6 hover:text-blue-600" />
+          </Link >
+
+        </div>
       </div>
     </nav>
   )
