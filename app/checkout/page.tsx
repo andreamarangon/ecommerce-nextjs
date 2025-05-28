@@ -66,7 +66,7 @@ export default function CheckoutPage() {
       </Card>
       <form className="max-w-md mx-auto">
         <input type="hidden" name="items" value={JSON.stringify(items)} />
-        <Button type="submit" variant="default" className="w-full">
+        <Button type="submit" variant="default" className="w-full bg-[#ff5151] hover:bg-[#ff3f26] text-white">
           Procedi al Pagamento
         </Button>
       </form>

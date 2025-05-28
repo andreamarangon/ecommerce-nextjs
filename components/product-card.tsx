@@ -17,7 +17,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
               fill
               priority
               sizes="auto"
-              className="group-hover:opacity-90 transition-opacity duration-300 rounded-t-lg object-cover"
+              className="group-hover:opacity-90 transition-opacity duration-300 rounded-t-lg object-contain"
             />
           </div>
         )}
@@ -29,7 +29,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
         <CardContent className="p-4 flex-grow flex flex-col justify-between">
           <p className="text-gray-600 text-sm mb-2">{product.description}</p>
           <p className="text-lg font-semibold text-gray-900">€{product.price}</p>
-          <Button className="mt-4 bg-black text-white">View Details</Button>
+          <Button className="mt-4 bg-[#ff5151] hover:bg-[#ff3f26] text-white">Vedi Dettagli</Button>
         </CardContent>
       </Card>
     </Link>

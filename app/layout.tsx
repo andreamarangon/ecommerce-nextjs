@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { Raleway } from "next/font/google";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Next.js Ecommerce",
@@ -15,8 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning
-        className="flex min-h-full flex-col bg-white"
-      >
+        className={raleway.className}>
         <Navbar />
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}

@@ -24,16 +24,16 @@ export const Carousel = ({ products }: Props) => {
   return (
     <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300">
       {currentProduct.images && currentProduct.images[0] && (
-        <div className="relative h-80 w-full">
+        <div className="relative h-96 w-full">
           <Image
             src={currentProduct.images[0]}
             alt={currentProduct.title}
             fill
-            className="transition-opacity duration-500 ease-in-out object-cover"
+            className="transition-opacity duration-500 ease-in-out object-contain"
           />
         </div>
       )}
-      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black/50">
+      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
         <CardTitle className="text-3xl font-bold text-white mb-2">
           {currentProduct.title}
         </CardTitle>

@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Shadcn UI
+
+Questo progetto utilizza [Shadcn UI](https://ui.shadcn.com/) per la sua interfaccia utente. Shadcn UI non è una libreria di componenti tradizionale. Invece, ti permette di installare i singoli componenti nel tuo progetto. Questo approccio offre diversi vantaggi:
+
+* **Personalizzazione:** Hai il pieno controllo sul codice dei componenti e puoi modificarli liberamente.
+* **Ottimizzazione:** Includi solo i componenti che effettivamente utilizzi, riducendo le dimensioni del bundle.
+* **Apprendimento:** Vedere il codice sorgente dei componenti aiuta a capire come sono costruiti.
+
+Abbiamo utilizzato Shadcn UI per creare un'interfaccia utente moderna e reattiva, sfruttando la potenza di [Tailwind CSS](https://tailwindcss.com/) per la stilizzazione.
+
+Per aggiungere nuovi componenti Shadcn UI al progetto, puoi utilizzare la CLI:
+
+```bash
+npx shadcn-ui@latest add [nome-del-componente]
