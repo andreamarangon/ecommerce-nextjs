@@ -10,10 +10,14 @@ import { usePathname } from 'next/navigation';
 export const Navbar = () => {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState<boolean>(false)
-  const [shadow, setShadow] = useState(false)
+  const [shadow, setShadow] = useState<boolean>(false)
   const { items } = useCartStore()
+
+  // Calcola il numero totale di articoli nel carrello
+  // Utilizza reduce per sommare le quantità degli articoli
   const cartCount = items.reduce((acc, item) => acc + item.quantity, 0)
 
+  // Gestione dell'apertura/chiusura del menu mobile
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -26,6 +30,7 @@ export const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Aggiungi l'evento di scroll per gestire l'ombra della navbar
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
@@ -36,8 +41,6 @@ export const Navbar = () => {
     }
     window.addEventListener('scroll', handleShadow)
   }, [])
-  console.log(pathname);
-
 
   return (
     <nav className={
